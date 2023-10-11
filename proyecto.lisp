@@ -1,0 +1,48 @@
+;; Proyecto: Calculadora Lisp
+;; Autor; Cesar Gonzalez Lopez
+;; Fecha: 11/10/2023
+
+;; creacion de las funciones
+(defun suma (a b)
+    (+ a b)
+)
+(defun resta (a b)
+    (- a b)
+)
+(defun multiplicacion (a b)
+    (* a b)
+)
+(defun division (a b)
+    (if (zerop b)
+        (message "No se puede dividir entre 0")
+        (/ a b)
+    )
+)
+(defun potencia (a b)
+    (expt a b)
+)
+(defun raiz (a)
+    (sqrt a)
+)
+
+;; entorno grafico
+(defun Calculadora ()
+    (format "Calculadora")
+    (format "Bienvenido a la calculadora de cesar para el proyecto de paradigmas ")
+    (format "primer parcial")
+    (format "ingrese el primer numero")
+    (setq PrimerValor (read))
+    (format "ingrese la operacion")
+    (setq op (read))
+    (format "ingrese el segundo numero")
+    (setq SegundoValor (read))
+
+    (cond ((equal op '+) (suma PrimerValor SegundoValor))
+        ((equal op '-) (resta PrimerValor SegundoValor))
+        ((equal op '*) (multiplicacion PrimerValor SegundoValor))
+        ((equal op '/) (division PrimerValor SegundoValor))
+        ((equal op '^) (potencia PrimerValor SegundoValor))
+        ((equal op 'r) (raiz a))
+        (t (format "operacion no valida"))
+    )
+)
