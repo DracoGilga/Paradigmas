@@ -37,11 +37,11 @@
                     ((/) (setq resultado (/ primerValor SegundoValor)))
                     ((r) (setq resultado (sqrt primerValor)))
                     ((^) (setq resultado (expt primerValor segundoValor)))
-                    (t (error "Operación no válida"))
+                    (t (error "Operacion no valida"))
                 )
                 resultado
             )
         )
-        (t (error "Expresión no válida"))
+        (t (error "Expresion no valida"))
     )
 )
