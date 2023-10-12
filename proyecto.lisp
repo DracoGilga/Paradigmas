@@ -21,11 +21,15 @@
         ((listp expresion)
             (let* 
                 (
+                    ;comparacion entre valores, toma como referencia una lista de
+                    ;3 elementos, el primer valor, la operacion y el segundo valor
+                    ;si el tercer valor es nulo, se toma como 0
                     (primerValor (evaluacion (first expresion)))
                     (operacion (second expresion))
                     (segundoValor (if (third expresion) (evaluacion (third expresion)) 0)) 
                     resultado
                 )
+                
                 (case operacion
                     ((+) (setq resultado (+ primerValor SegundoValor)))
                     ((-) (setq resultado (- primerValor SegundoValor)))
