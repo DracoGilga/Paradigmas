@@ -23,7 +23,7 @@
                 (
                     (primerValor (evaluacion (first expresion)))
                     (operacion (second expresion))
-                    (SegundoValor (evaluacion (third expresion)))
+                    (segundoValor (if (third expresion) (evaluacion (third expresion)) 0)) 
                     resultado
                 )
                 (case operacion
@@ -31,6 +31,8 @@
                     ((-) (setq resultado (- primerValor SegundoValor)))
                     ((*) (setq resultado (* primerValor SegundoValor)))
                     ((/) (setq resultado (/ primerValor SegundoValor)))
+                    ((r) (setq resultado (sqrt primerValor)))
+                    ((^) (setq resultado (expt primerValor segundoValor)))
                     (t (error "Operación no válida"))
                 )
                 resultado
