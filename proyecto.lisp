@@ -1,14 +1,14 @@
-;; Proyecto: Calculadora Lisp
-;; Autor; Cesar Gonzalez Lopez
-;; Fecha: 11/10/2023
+; Proyecto: Calculadora Lisp
+; Autor; Cesar Gonzalez Lopez
+; Fecha: 11/10/2023
 
 
-;; entorno grafico
+; entorno grafico
 (defun Calculadora ()
     (print "Calculadora")
     (print "Bienvenido a la calculadora de cesar para el proyecto de paradigmas ")
     (print "primer parcial")
-    (print "ingrese el la operacion numero")
+    (print "ingrese la operacion")
     (print "")
     (setq operacion (read))
 
@@ -45,3 +45,10 @@
         (t (error "Expresion no valida"))
     )
 )
+
+
+
+
+
+;((40 / 10) + ((5 - 2) ^ 3))
+;((3 + 5) * ((2 - 1) * 3))
