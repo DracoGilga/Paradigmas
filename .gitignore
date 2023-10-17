@@ -1,0 +1,14 @@
+# Ignorar todos los archivos de Adobe
+*.ai
+*.indd
+*.psd
+*.pdf
+*.swf
+
+# Ignorar todos los archivos de Office 365
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.xls
+*.xlsx
